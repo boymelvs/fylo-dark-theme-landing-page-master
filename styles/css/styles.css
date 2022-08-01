@@ -136,7 +136,7 @@ main .illustration {
   main .illustration {
     background: hsl(217deg, 28%, 15%);
     padding: 4rem 0 8rem 0;
-    background-image: url("/images/bg-curvy-desktop.svg");
+    background-image: url("../../images/bg-curvy-desktop.svg");
     background-repeat: no-repeat;
     background-position: bottom -1rem left -1rem;
     background-size: 100%;
@@ -157,7 +157,7 @@ main .illustration img {
   padding: 0rem 2rem;
   background: hsl(217deg, 28%, 15%);
   padding: 4rem 0 8em 0;
-  background-image: url("/images/bg-curvy-mobile.svg");
+  background-image: url("../../images/bg-curvy-mobile.svg");
   background-repeat: no-repeat;
   background-position: bottom -1rem center;
   background-size: 120%;
@@ -452,7 +452,7 @@ main .testimonial {
   justify-content: center;
   gap: 3rem;
   padding: 3rem 4rem 10rem 4rem;
-  background-image: url("/images/bg-quotes.png");
+  background-image: url("../../images/bg-quotes.png");
   background-repeat: no-repeat;
   background-position: top 0.5rem left 5rem;
   background-size: 3rem;

@@ -86,7 +86,7 @@ main {
          padding: 4rem 0 8rem 0;
 
          background: {
-            image: url("/images/bg-curvy-desktop.svg");
+            image: url("../../images/bg-curvy-desktop.svg");
             repeat: no-repeat;
             position: bottom -1rem left -1rem;
             size: 100%;
@@ -110,7 +110,7 @@ main {
          padding: 4rem 0 8em 0;
 
          background: {
-            image: url("/images/bg-curvy-mobile.svg");
+            image: url("../../images/bg-curvy-mobile.svg");
             repeat: no-repeat;
             position: bottom -1rem center;
             size: 120%;
@@ -273,7 +273,7 @@ main {
       @include flexBox(flex, column, center, center, 3rem);
       padding: 3rem 4rem 10rem 4rem;
 
-      background-image: url("/images/bg-quotes.png");
+      background-image: url("../../images/bg-quotes.png");
       background-repeat: no-repeat;
       background-position: top 0.5rem left 5rem;
       background-size: 3rem;
