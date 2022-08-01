@@ -41,23 +41,47 @@ header {
       max-width: 144rem;
       width: 100%;
       font-family: $font-fam-raleway;
-      padding: 2rem 1rem;
+      padding: 2rem;
 
       @media (min-width: 768px) {
-         padding: 2rem 10rem;
+         padding: 2rem 4rem;
+      }
+
+      @media (min-width: 1024px) {
+         padding: 2rem 8rem;
       }
 
       .header_logo {
          width: 8rem;
          height: 2.5rem;
+
+         @media (min-width: 1024px) {
+            width: 12rem;
+            height: 3.5rem;
+         }
       }
 
       .menu {
-         @include flexBox(flex, row, center, center, 2rem);
+         @include flexBox(flex, row, center, flex-end, 2rem);
 
          a {
             text-decoration: none;
             color: $white;
+            text-align: right;
+            // width: 5rem;
+
+            @media (min-width: 768px) {
+               width: 8rem;
+            }
+
+            div {
+               width: 100%;
+            }
+
+            &:hover {
+               font-weight: $font-weight-700;
+               text-decoration: underline;
+            }
          }
 
          @media (max-width: 280px) {
@@ -105,9 +129,8 @@ main {
 
       img {
          width: 100%;
-         padding: 0rem 2rem;
          background: $dark-blue-intro-email-bg;
-         padding: 4rem 0 8em 0;
+         padding: 4rem 2rem 8em 2rem;
 
          background: {
             image: url("../../images/bg-curvy-mobile.svg");
@@ -153,12 +176,13 @@ main {
       }
 
       .btn_container {
+         margin: 0 auto;
+         @extend %btn-container-suedo;
          min-width: 15rem;
          margin-top: 3rem;
          text-align: center;
-         width: 100%;
+         width: 80%;
          position: relative;
-         @extend %btn-container-suedo;
 
          @media (min-width: 450px) {
             width: 20rem;
@@ -167,8 +191,12 @@ main {
 
       .get_started_btn {
          @extend %btn-style;
-         width: 80%;
+         width: 100%;
          position: relative;
+
+         @media (min-width: 450px) {
+            width: 20rem;
+         }
       }
    }
 
@@ -303,19 +331,30 @@ main {
       padding: 0 2rem;
       z-index: 1;
 
+      @media (min-width: 768px) {
+         width: 75rem;
+         padding: 0;
+      }
+
       .early_access {
          background: $dark-blue-intro-email-bg;
          @include flexBox(flex, column, center, center, 2rem);
-         padding: 4rem 2.5rem;
+         padding: 4rem 3rem;
          width: 100%;
          border-radius: 1rem;
 
          h2 {
             font-size: 1.8rem;
          }
+
          p {
             line-height: 2.5rem;
             text-align: center;
+            padding: 0 2rem;
+
+            @media (min-width: 768px) {
+               padding: 0 1.5rem;
+            }
          }
 
          .cta {
@@ -323,9 +362,19 @@ main {
             @include flexBox(flex, column, center, center, 2.5rem);
             width: 100%;
 
+            @media (min-width: 550px) {
+               flex-direction: row;
+               gap: 1rem;
+               padding: 0rem 1rem;
+            }
+
             .subscribe {
                position: relative;
                width: 100%;
+
+               @media (min-width: 550px) {
+                  width: 70%;
+               }
 
                .email {
                   border: none;
@@ -352,8 +401,11 @@ main {
             .subscribe_btn_container {
                width: 100%;
                position: relative;
-
                @extend %btn-container-suedo;
+
+               @media (min-width: 550px) {
+                  width: 20rem;
+               }
             }
 
             .get_free_btn {
@@ -373,6 +425,10 @@ footer {
    max-width: 144rem;
    width: 100%;
 
+   @media (min-width: 1024px) {
+      padding: 25rem 8rem 0 8rem;
+   }
+
    .footer_content {
       @include flexBox(flex, column, none, center, 4rem);
 
@@ -384,23 +440,34 @@ footer {
          @include flexBox(flex, column, none, center, 5rem);
          width: 100%;
 
+         @media (min-width: 1024px) {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 2rem;
+         }
+
          .address_container {
             @include flexBox(flex, column, none, center, 2rem);
             width: 100%;
+
+            @media (min-width: 768px) {
+               flex-direction: row;
+               justify-content: space-around;
+               align-items: flex-start;
+               gap: 5rem;
+            }
+
+            @media (min-width: 1024px) {
+               grid-column: 1 / span 6;
+            }
 
             .location {
                display: flex;
                gap: 3rem;
 
-               img {
-                  width: 2rem;
-                  height: 2rem;
+               @media (min-width: 768px) {
+                  width: 50%;
                }
-            }
-
-            .phone {
-               display: flex;
-               gap: 3rem;
 
                img {
                   width: 2rem;
@@ -408,22 +475,56 @@ footer {
                }
             }
 
-            .email {
-               display: flex;
-               gap: 3rem;
+            .phone_email_container {
+               @include flexBox(flex, column, none, center, 1rem);
 
-               img {
-                  width: 2rem;
-                  height: 2rem;
+               @media (min-width: 768px) {
+                  width: 50%;
+               }
+
+               .phone {
+                  display: flex;
+                  gap: 3rem;
+
+                  img {
+                     width: 2rem;
+                     height: 2rem;
+                  }
+               }
+
+               .email {
+                  display: flex;
+                  gap: 3rem;
+
+                  img {
+                     width: 2rem;
+                     height: 2rem;
+                  }
                }
             }
          }
 
          .about_contact {
             @include flexBox(flex, column, none, center, 5rem);
+            width: 100%;
+
+            @media (min-width: 768px) {
+               flex-direction: row;
+               justify-content: space-around;
+               align-items: flex-start;
+               gap: 5rem;
+            }
+
+            @media (min-width: 1024px) {
+               grid-column: 7 / span 3;
+            }
 
             .about {
                @include flexBox(flex, column, none, center, 2rem);
+
+               @media (min-width: 768px) {
+                  width: 100%;
+               }
 
                a {
                   text-decoration: none;
@@ -438,6 +539,10 @@ footer {
             .contact {
                @include flexBox(flex, column, none, center, 2rem);
 
+               @media (min-width: 768px) {
+                  width: 100%;
+               }
+
                a {
                   text-decoration: none;
                   color: $white;
@@ -451,6 +556,11 @@ footer {
 
          .social_media {
             @include flexBox(flex, row, center, center, 2rem);
+
+            @media (min-width: 1024px) {
+               align-items: flex-start;
+               grid-column: 10 / span 3;
+            }
 
             img {
                width: 3rem;
