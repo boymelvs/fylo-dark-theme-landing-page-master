@@ -465,7 +465,7 @@ main .productive .stay_productive_container .see_how_works {
   text-align: left;
   border-bottom: 0.2rem solid hsl(176deg, 68%, 64%);
   color: hsl(176deg, 68%, 64%);
-  background-image: url("/images/icon-arrow.svg");
+  background-image: url("../../images/icon-arrow.svg");
   background-repeat: no-repeat;
   background-position: right;
   background-size: 2rem;
