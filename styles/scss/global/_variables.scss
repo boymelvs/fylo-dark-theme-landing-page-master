@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+/* colors primary */
+$dark-blue-intro-email-bg: hsl(217, 28%, 15%);
+$dark-blue-main-bg: hsl(218, 28%, 13%);
+$dark-blue-footer-bg: hsl(216, 53%, 9%);
+$dark-blue-testi-bg: hsl(219, 30%, 18%);
+
+/* colors accent */
+$cyan: hsl(176, 68%, 64%);
+$cyan-blue-gradient: hsl(176, 68%, 64%), hsl(198, 60%, 50%);
+$light-red: hsl(0, 100%, 63%);
+$white: hsl(0, 0%, 100%);
+
+/* font */
+$font-size-10: 62.5%; /* 10px */
+$font-fam-raleway: "Raleway", sans-serif;
+$font-fam-open-sans: "Open Sans", sans-serif;
+$font-fam-spacemono: "Space Mono", sans-serif;
+$font-weight-400: 400;
+$font-weight-700: 700;

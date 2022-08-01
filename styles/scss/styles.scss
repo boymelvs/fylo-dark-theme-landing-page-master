@@ -1,0 +1,482 @@
+@import "./global/variables";
+
+@import "./global/mixin";
+
+@import "./global/buttons";
+
+*,
+::before,
+::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html {
+   font-size: $font-size-10;
+   scroll-behavior: smooth;
+}
+
+body {
+   font-size: 1.4rem;
+   font-weight: $font-weight-400;
+   font-family: $font-fam-open-sans;
+   color: $white;
+}
+
+.my_container {
+   margin: 0 auto;
+   background: $dark-blue-main-bg;
+   min-width: 32rem;
+   max-width: 144rem;
+}
+
+header {
+   max-width: 144rem;
+   width: 100%;
+   background: $dark-blue-intro-email-bg;
+
+   .nav_bar {
+      @include flexBox(flex, row, center, space-between, 0);
+      max-width: 144rem;
+      width: 100%;
+      font-family: $font-fam-raleway;
+      padding: 2rem 1rem;
+
+      @media (min-width: 768px) {
+         padding: 2rem 10rem;
+      }
+
+      .header_logo {
+         width: 8rem;
+         height: 2.5rem;
+      }
+
+      .menu {
+         @include flexBox(flex, row, center, center, 2rem);
+
+         a {
+            text-decoration: none;
+            color: $white;
+         }
+
+         @media (max-width: 280px) {
+            flex-wrap: wrap;
+         }
+      }
+   }
+}
+
+/*================= END OF HEADER =================*/
+
+main {
+   @include flexBox(flex, column, center, center, 0);
+   max-width: 144rem;
+   width: 100%;
+
+   /* 1st section */
+   .illustration {
+      @include flexBox(flex, column, center, center, 0);
+      width: 100%;
+      position: relative;
+      padding-bottom: 8rem;
+
+      @media (min-width: 550px) {
+         background: $dark-blue-intro-email-bg;
+         padding: 4rem 0 8rem 0;
+
+         background: {
+            image: url("/images/bg-curvy-desktop.svg");
+            repeat: no-repeat;
+            position: bottom -1rem left -1rem;
+            size: 100%;
+         }
+      }
+
+      @media (min-width: 768px) {
+         background: {
+            position: bottom center;
+         }
+      }
+
+      @media (min-width: 1024px) {
+         padding-bottom: 18rem;
+      }
+
+      img {
+         width: 100%;
+         padding: 0rem 2rem;
+         background: $dark-blue-intro-email-bg;
+         padding: 4rem 0 8em 0;
+
+         background: {
+            image: url("/images/bg-curvy-mobile.svg");
+            repeat: no-repeat;
+            position: bottom -1rem center;
+            size: 120%;
+         }
+
+         @media (min-width: 550px) {
+            width: 45rem;
+            padding: 4rem 0 0 0;
+            background: transparent;
+         }
+      }
+
+      h1 {
+         font-family: $font-fam-raleway;
+         line-height: 3rem;
+         text-align: center;
+         margin-top: -9rem;
+         padding: 0 0 3rem 0;
+
+         @media (min-width: 550px) {
+            margin: 0 auto;
+            font-size: 2.5rem;
+            width: 55rem;
+            margin-top: 3rem;
+         }
+      }
+
+      p {
+         text-align: center;
+         padding: 0rem 4rem;
+
+         @media (min-width: 550px) {
+            margin: 0 auto;
+            width: 50rem;
+         }
+
+         @media (min-width: 1201px) {
+            margin: 3rem auto;
+         }
+      }
+
+      .btn_container {
+         min-width: 15rem;
+         margin-top: 3rem;
+         text-align: center;
+         width: 100%;
+         position: relative;
+         @extend %btn-container-suedo;
+
+         @media (min-width: 450px) {
+            width: 20rem;
+         }
+      }
+
+      .get_started_btn {
+         @extend %btn-style;
+         width: 80%;
+         position: relative;
+      }
+   }
+
+   /* 2nd section */
+   .services {
+      @include flexBox(flex, column, center, center, 10rem);
+      width: 100%;
+
+      @media (min-width: 550px) {
+         flex-direction: row;
+         flex-wrap: wrap;
+         gap: 5rem;
+      }
+
+      .access_files {
+         @include serviceList();
+      }
+
+      .security {
+         @include serviceList();
+      }
+
+      .real_time {
+         @include serviceList();
+      }
+
+      .store_file {
+         @include serviceList();
+      }
+   }
+
+   /* 3rd section */
+   .productive {
+      @include flexBox(flex, column, center, center, 4rem);
+      padding: 10rem 2.5rem;
+      width: 100%;
+
+      @media (min-width: 768px) {
+         display: grid;
+         grid-template-columns: repeat(12, 1fr);
+         padding: 10rem 4rem;
+      }
+
+      img {
+         width: 100%;
+
+         @media (min-width: 768px) {
+            grid-column: 1 / span 6;
+         }
+
+         @media (min-width: 1201px) {
+            width: 60rem;
+         }
+      }
+
+      .stay_productive_container {
+         @include flexBox(flex, column, center, center, 2rem);
+         width: 100%;
+
+         @media (min-width: 768px) {
+            grid-column: 7 / span 6;
+
+            margin: 0 auto;
+         }
+
+         @media (min-width: 1201px) {
+            width: 50rem;
+         }
+
+         h2 {
+            font-size: 1.8rem;
+            text-align: center;
+         }
+
+         p {
+            line-height: 3rem;
+         }
+
+         .see_how_works {
+            align-self: flex-start;
+            padding: 0 2.5rem 0 0;
+            text-align: left;
+            border-bottom: 0.2rem solid $cyan;
+            color: $cyan;
+
+            background-image: url("/images/icon-arrow.svg");
+            background-repeat: no-repeat;
+            background-position: right;
+            background-size: 2rem;
+
+            &:hover {
+               border-bottom: 0.2rem solid $white;
+               cursor: pointer;
+               filter: brightness(0) invert(1);
+            }
+         }
+      }
+   }
+
+   /* 4th section */
+   .testimonial {
+      @include flexBox(flex, column, center, center, 3rem);
+      padding: 3rem 4rem 10rem 4rem;
+
+      background-image: url("/images/bg-quotes.png");
+      background-repeat: no-repeat;
+      background-position: top 0.5rem left 5rem;
+      background-size: 3rem;
+
+      @media (min-width: 768px) {
+         flex-direction: row;
+         flex-wrap: wrap;
+         gap: 8rem;
+         padding-bottom: 15rem;
+      }
+
+      .first_testi {
+         @include cardTestimonial();
+      }
+
+      .second_testi {
+         @include cardTestimonial();
+      }
+
+      .third_testi {
+         @include cardTestimonial();
+      }
+   }
+
+   /* 5th section */
+   .early_access_container {
+      padding: 0 2rem;
+      z-index: 1;
+
+      .early_access {
+         background: $dark-blue-intro-email-bg;
+         @include flexBox(flex, column, center, center, 2rem);
+         padding: 4rem 2.5rem;
+         width: 100%;
+         border-radius: 1rem;
+
+         h2 {
+            font-size: 1.8rem;
+         }
+         p {
+            line-height: 2.5rem;
+            text-align: center;
+         }
+
+         .cta {
+            background: $dark-blue-intro-email-bg;
+            @include flexBox(flex, column, center, center, 2.5rem);
+            width: 100%;
+
+            .subscribe {
+               position: relative;
+               width: 100%;
+
+               .email {
+                  border: none;
+                  border-radius: 2.5rem;
+                  padding: 1.5rem 2rem;
+                  width: 100%;
+                  outline: none;
+
+                  &::placeholder {
+                     opacity: 0.5;
+                  }
+               }
+
+               .warning {
+                  display: none;
+                  width: 100%;
+                  text-align: center;
+                  font-size: 1.2rem;
+                  color: $light-red;
+                  position: absolute;
+               }
+            }
+
+            .subscribe_btn_container {
+               width: 100%;
+               position: relative;
+
+               @extend %btn-container-suedo;
+            }
+
+            .get_free_btn {
+               @extend %btn-style;
+               width: 100%;
+            }
+         }
+      }
+   }
+}
+/*================= END OF MAIN =================*/
+
+footer {
+   margin-top: -17rem;
+   padding: 25rem 4rem 0 4rem;
+   background: $dark-blue-footer-bg;
+   max-width: 144rem;
+   width: 100%;
+
+   .footer_content {
+      @include flexBox(flex, column, none, center, 4rem);
+
+      .footer_logo {
+         width: 100%;
+      }
+
+      .address_contact_media_container {
+         @include flexBox(flex, column, none, center, 5rem);
+         width: 100%;
+
+         .address_container {
+            @include flexBox(flex, column, none, center, 2rem);
+            width: 100%;
+
+            .location {
+               display: flex;
+               gap: 3rem;
+
+               img {
+                  width: 2rem;
+                  height: 2rem;
+               }
+            }
+
+            .phone {
+               display: flex;
+               gap: 3rem;
+
+               img {
+                  width: 2rem;
+                  height: 2rem;
+               }
+            }
+
+            .email {
+               display: flex;
+               gap: 3rem;
+
+               img {
+                  width: 2rem;
+                  height: 2rem;
+               }
+            }
+         }
+
+         .about_contact {
+            @include flexBox(flex, column, none, center, 5rem);
+
+            .about {
+               @include flexBox(flex, column, none, center, 2rem);
+
+               a {
+                  text-decoration: none;
+                  color: $white;
+
+                  &:hover {
+                     font-weight: $font-weight-700;
+                  }
+               }
+            }
+
+            .contact {
+               @include flexBox(flex, column, none, center, 2rem);
+
+               a {
+                  text-decoration: none;
+                  color: $white;
+
+                  &:hover {
+                     font-weight: $font-weight-700;
+                  }
+               }
+            }
+         }
+
+         .social_media {
+            @include flexBox(flex, row, center, center, 2rem);
+
+            img {
+               width: 3rem;
+               filter: brightness(0) invert(1);
+               transition: all 350ms;
+
+               &:hover {
+                  cursor: pointer;
+                  filter: unset;
+               }
+            }
+         }
+      }
+
+      .attribution {
+         text-align: center;
+         font-size: 1rem;
+         font-family: $font-fam-spacemono;
+         padding: 1rem;
+
+         a {
+            text-decoration: none;
+            color: $white;
+         }
+      }
+   }
+}
+
+/*================= END OF FOOTER =================*/

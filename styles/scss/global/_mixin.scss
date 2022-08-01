@@ -1,0 +1,76 @@
+@mixin flexBox($display, $direction, $alignItems, $justifyContent, $gap) {
+   display: $display;
+   flex-direction: $direction;
+   align-items: $alignItems;
+   justify-content: $justifyContent;
+   gap: $gap;
+}
+
+@mixin serviceList() {
+   @include flexBox(flex, column, center, center, 2rem);
+   text-align: center;
+
+   img {
+      width: 7rem;
+      padding-bottom: 2rem;
+   }
+
+   .title {
+      font-size: 1.8rem;
+      font-family: $font-fam-raleway;
+      font-weight: $font-weight-700;
+   }
+
+   .para_text {
+      padding: 0 2.5rem;
+      line-height: 3rem;
+   }
+
+   @media (min-width: 550px) {
+      width: 30rem;
+   }
+
+   @media (min-width: 768px) {
+      width: 35rem;
+   }
+
+   @media (min-width: 1024px) {
+      width: 42.5rem;
+   }
+}
+
+@mixin cardTestimonial() {
+   @include flexBox(flex, column, none, center, 2rem);
+   background: $dark-blue-testi-bg;
+   border-radius: 0.5rem;
+   padding: 2rem;
+   font-size: 1.1rem;
+
+   .testi_para {
+      line-height: 2rem;
+
+      @media (min-width: 768px) {
+         width: 24rem;
+      }
+   }
+
+   .profile {
+      @include flexBox(flex, row, center, none, 1rem);
+
+      img {
+         width: 4rem;
+         height: 4rem;
+         border-radius: 50%;
+      }
+
+      .name_position {
+         @include flexBox(flex, column, none, center, 0.2rem);
+
+         .name {
+            font-size: 1.4rem;
+            font-weight: $font-weight-700;
+            letter-spacing: 0.15rem;
+         }
+      }
+   }
+}
