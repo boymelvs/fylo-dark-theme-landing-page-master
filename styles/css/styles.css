@@ -39,33 +39,6 @@ main .early_access_container .early_access .cta .get_free_btn:hover, main .illus
   cursor: pointer;
 }
 
-*,
-::before,
-::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-size: 1.4rem;
-  font-weight: 400;
-  font-family: "Open Sans", sans-serif;
-  color: hsl(0deg, 0%, 100%);
-}
-
-.my_container {
-  margin: 0 auto;
-  background: hsl(218deg, 28%, 13%);
-  min-width: 32rem;
-  max-width: 144rem;
-}
-
 header {
   max-width: 144rem;
   width: 100%;
@@ -113,6 +86,7 @@ header .nav_bar .menu a {
   text-decoration: none;
   color: hsl(0deg, 0%, 100%);
   text-align: right;
+  width: 5rem;
 }
 @media (min-width: 768px) {
   header .nav_bar .menu a {
@@ -907,5 +881,31 @@ footer .footer_content .attribution a {
 }
 
 /*================= END OF FOOTER =================*/
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  color: hsl(0deg, 0%, 100%);
+}
+
+.my_container {
+  margin: 0 auto;
+  background: hsl(218deg, 28%, 13%);
+  min-width: 32rem;
+  max-width: 144rem;
+}
 
 /*# sourceMappingURL=styles.css.map */

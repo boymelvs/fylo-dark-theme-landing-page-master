@@ -1,0 +1,66 @@
+.productive {
+   @include flexBox(flex, column, center, center, 4rem);
+   padding: 10rem 2.5rem;
+   width: 100%;
+
+   @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      padding: 10rem 4rem;
+   }
+
+   img {
+      width: 100%;
+
+      @media (min-width: 768px) {
+         grid-column: 1 / span 6;
+      }
+
+      @media (min-width: 1201px) {
+         width: 60rem;
+      }
+   }
+
+   .stay_productive_container {
+      @include flexBox(flex, column, center, center, 2rem);
+      width: 100%;
+
+      @media (min-width: 768px) {
+         grid-column: 7 / span 6;
+
+         margin: 0 auto;
+      }
+
+      @media (min-width: 1201px) {
+         width: 50rem;
+      }
+
+      h2 {
+         font-size: 1.8rem;
+         text-align: center;
+      }
+
+      p {
+         line-height: 3rem;
+      }
+
+      .see_how_works {
+         align-self: flex-start;
+         padding: 0 2.5rem 0 0;
+         text-align: left;
+         border-bottom: 0.2rem solid $cyan;
+         color: $cyan;
+
+         background-image: url("../../images/icon-arrow.svg");
+         background-repeat: no-repeat;
+         background-position: right;
+         background-size: 2rem;
+
+         &:hover {
+            border-bottom: 0.2rem solid $white;
+            cursor: pointer;
+            filter: brightness(0) invert(1);
+         }
+      }
+   }
+}

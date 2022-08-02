@@ -1,0 +1,88 @@
+.early_access_container {
+   padding: 0 2rem;
+   z-index: 1;
+
+   @media (min-width: 768px) {
+      width: 75rem;
+      padding: 0;
+   }
+
+   .early_access {
+      background: $dark-blue-intro-email-bg;
+      @include flexBox(flex, column, center, center, 2rem);
+      padding: 4rem 3rem;
+      width: 100%;
+      border-radius: 1rem;
+
+      h2 {
+         font-size: 1.8rem;
+      }
+
+      p {
+         line-height: 2.5rem;
+         text-align: center;
+         padding: 0 2rem;
+
+         @media (min-width: 768px) {
+            padding: 0 1.5rem;
+         }
+      }
+
+      .cta {
+         background: $dark-blue-intro-email-bg;
+         @include flexBox(flex, column, center, center, 2.5rem);
+         width: 100%;
+
+         @media (min-width: 550px) {
+            flex-direction: row;
+            gap: 1rem;
+            padding: 0rem 1rem;
+         }
+
+         .subscribe {
+            position: relative;
+            width: 100%;
+
+            @media (min-width: 550px) {
+               width: 70%;
+            }
+
+            .email {
+               border: none;
+               border-radius: 2.5rem;
+               padding: 1.5rem 2rem;
+               width: 100%;
+               outline: none;
+
+               &::placeholder {
+                  opacity: 0.5;
+               }
+            }
+
+            .warning {
+               display: none;
+               width: 100%;
+               text-align: center;
+               font-size: 1.2rem;
+               color: $light-red;
+               position: absolute;
+            }
+         }
+
+         .subscribe_btn_container {
+            width: 100%;
+            position: relative;
+            @extend %btn-container-suedo;
+
+            @media (min-width: 550px) {
+               width: 20rem;
+            }
+         }
+
+         .get_free_btn {
+            @extend %btn-style;
+            width: 100%;
+         }
+      }
+   }
+}

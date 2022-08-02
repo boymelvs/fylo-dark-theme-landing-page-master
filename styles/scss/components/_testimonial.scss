@@ -1,0 +1,28 @@
+.testimonial {
+   @include flexBox(flex, column, center, center, 3rem);
+   padding: 3rem 4rem 10rem 4rem;
+
+   background-image: url("../../images/bg-quotes.png");
+   background-repeat: no-repeat;
+   background-position: top 0.5rem left 5rem;
+   background-size: 3rem;
+
+   @media (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 8rem;
+      padding-bottom: 15rem;
+   }
+
+   .first_testi {
+      @include cardTestimonial();
+   }
+
+   .second_testi {
+      @include cardTestimonial();
+   }
+
+   .third_testi {
+      @include cardTestimonial();
+   }
+}

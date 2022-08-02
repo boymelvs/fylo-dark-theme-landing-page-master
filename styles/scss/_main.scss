@@ -1,0 +1,21 @@
+main {
+   @include flexBox(flex, column, center, center, 0);
+   max-width: 144rem;
+   width: 100%;
+
+   /* 1st section */
+   @import "./components/illustration";
+
+   /* 2nd section */
+   @import "./components/services";
+
+   /* 3rd section */
+   @import "./components/productive";
+
+   /* 4th section */
+   @import "./components/testimonial";
+
+   /* 5th section */
+   @import "./components/signup";
+}
+/*================= END OF MAIN =================*/

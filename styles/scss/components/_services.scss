@@ -1,0 +1,26 @@
+.services {
+   @include flexBox(flex, column, center, center, 10rem);
+   width: 100%;
+
+   @media (min-width: 550px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 5rem;
+   }
+
+   .access_files {
+      @include serviceList();
+   }
+
+   .security {
+      @include serviceList();
+   }
+
+   .real_time {
+      @include serviceList();
+   }
+
+   .store_file {
+      @include serviceList();
+   }
+}

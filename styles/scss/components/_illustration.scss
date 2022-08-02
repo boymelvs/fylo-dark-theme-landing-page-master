@@ -1,0 +1,100 @@
+.illustration {
+   @include flexBox(flex, column, center, center, 0);
+   width: 100%;
+   position: relative;
+   padding-bottom: 8rem;
+
+   @media (min-width: 550px) {
+      background: $dark-blue-intro-email-bg;
+      padding: 4rem 0 8rem 0;
+
+      background: {
+         image: url("../../images/bg-curvy-desktop.svg");
+         repeat: no-repeat;
+         position: bottom -1rem left -1rem;
+         size: 100%;
+      }
+   }
+
+   @media (min-width: 768px) {
+      background: {
+         position: bottom center;
+      }
+   }
+
+   @media (min-width: 1024px) {
+      padding-bottom: 18rem;
+   }
+
+   img {
+      width: 100%;
+      background: $dark-blue-intro-email-bg;
+      padding: 4rem 2rem 8em 2rem;
+
+      background: {
+         image: url("../../images/bg-curvy-mobile.svg");
+         repeat: no-repeat;
+         position: bottom -1rem center;
+         size: 120%;
+      }
+
+      @media (min-width: 550px) {
+         width: 45rem;
+         padding: 4rem 0 0 0;
+         background: transparent;
+      }
+   }
+
+   h1 {
+      font-family: $font-fam-raleway;
+      line-height: 3rem;
+      text-align: center;
+      margin-top: -9rem;
+      padding: 0 0 3rem 0;
+
+      @media (min-width: 550px) {
+         margin: 0 auto;
+         font-size: 2.5rem;
+         width: 55rem;
+         margin-top: 3rem;
+      }
+   }
+
+   p {
+      text-align: center;
+      padding: 0rem 4rem;
+
+      @media (min-width: 550px) {
+         margin: 0 auto;
+         width: 50rem;
+      }
+
+      @media (min-width: 1201px) {
+         margin: 3rem auto;
+      }
+   }
+
+   .btn_container {
+      margin: 0 auto;
+      @extend %btn-container-suedo;
+      min-width: 15rem;
+      margin-top: 3rem;
+      text-align: center;
+      width: 80%;
+      position: relative;
+
+      @media (min-width: 450px) {
+         width: 20rem;
+      }
+   }
+
+   .get_started_btn {
+      @extend %btn-style;
+      width: 100%;
+      position: relative;
+
+      @media (min-width: 450px) {
+         width: 20rem;
+      }
+   }
+}
