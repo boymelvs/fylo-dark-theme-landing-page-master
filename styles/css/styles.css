@@ -675,6 +675,9 @@ main .early_access_container .early_access .cta .subscribe .warning {
   color: hsl(0deg, 100%, 63%);
   position: absolute;
 }
+main .early_access_container .early_access .cta .subscribe .warning.active {
+  display: block;
+}
 main .early_access_container .early_access .cta .subscribe_btn_container {
   width: 100%;
   position: relative;

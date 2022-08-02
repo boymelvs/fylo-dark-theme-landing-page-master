@@ -66,6 +66,10 @@
                font-size: 1.2rem;
                color: $light-red;
                position: absolute;
+
+               &.active {
+                  display: block;
+               }
             }
          }
 
